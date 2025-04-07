@@ -1,0 +1,14 @@
+repositories:
+    - name: example_torero_project
+      description: Repository with example torero project
+      url: https://github.com/ChrisCalloway/example_torero_project.git
+      reference: main
+services:
+    - name: test_ansible_playbook
+      type: ansible-playbook
+      description: An ansible playbook to say hello-world
+      playbooks:
+        - hello_world.yml
+      working-directory: ansible_playbooks
+      repository: example_torero_project
+      inventory: inventory.yml
